@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Thoughts</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>My Thoughts</h1>
+    <p>peaceful reflections and positive vibes</p>
+  </header>
+
+  <main>
+    <section>
+      <h2><i class="fas fa-heart icon"></i> Welcome</h2>
+      <p>Hello and welcome to this cozy corner of the web. This space is meant to be a light and calm place to share thoughts, ideas, and reflections.</p>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-seedling icon"></i> Daily Vibes</h2>
+      <p>Every day is a fresh beginning. Let’s take a moment to breathe, smile, and find joy in the small things.</p>
+      <p class="quote">"Breathe deeply, live gently, and love freely."</p>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-book icon"></i> Thoughts</h2>
+      <p>Here you’ll find notes on life, feelings, learnings, and moments that inspire a sense of peace and clarity.</p>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-moon icon"></i> Night Musings</h2>
+      <p>Soft thoughts that rise when the world quiets down. A place for stillness and personal reflection under the stars.</p>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-pen icon"></i> Share Your Thoughts</h2>
+      <form class="writing-form" id="writingForm">
+        <label for="entry">Write something beautiful:</label><br>
+        <textarea id="entry" name="entry" rows="6" cols="50" placeholder="Your gentle words..."></textarea><br>
+        <button type="submit">Post</button>
+      </form>
+    </section>
+
+    <section id="shared-thoughts">
+      <h2><i class="fas fa-comments icon"></i> Shared Thoughts</h2>
+      <div id="thoughts-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with calm energy and soft colors ✨</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('writingForm');
+    const entry = document.getElementById('entry');
+    const container = document.getElementById('thoughts-container');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const text = entry.value.trim();
+      if (text !== "") {
+        const newThought = document.createElement('div');
+        newThought.className = 'thought';
+        newThought.innerHTML = `<p>${text}</p>`;
+        container.prepend(newThought); 
+        entry.value = "";
+      }
+    });
+  </script>
+</body>
+</html>
