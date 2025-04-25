@@ -16,3 +16,9 @@ A soft and peaceful space for sharing gentle thoughts, positive vibes, and refle
 ---
 
 > Made with calm energy and positive vibes ✨
+> 
+## 🚀 Check Out the Website! 🌟
+
+Want to see the site in action? Just click below!
+
+[View the website](https://hemima1.github.io/my-thoughts-blog/)
